@@ -1,0 +1,7 @@
+<button (click)="toggle()">Toggle</button>
+<div *ngIf="isVisible">Student List :
+<ul>
+    <li *ngFor="let s of students">{{ s }}</li>
+</ul>
+</div>
+<p>Value of isVisible : {{ isVisible }}</p>
