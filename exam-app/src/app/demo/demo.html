@@ -1,0 +1,30 @@
+<!-- <p>demo works!</p>
+<button (click)="inc()">Increment</button>
+<p>{{ count }}</p>
+<button (click)="displayStudentInfo()">Show details</button>
+<div *ngIf="showDetails">
+    <p>
+       Name : {{ name }}<br>
+       Age : {{ age }} <br>
+       Course : {{ course }} 
+    </p>
+</div> -->
+<p *ngIf="isLoggedIn">Logged in</p>
+
+<ul>
+  <li *ngFor="let s of students">{{ s }}</li>
+</ul>
+
+<div [ngSwitch]="role">
+  <p *ngSwitchCase="'admin'">Admin Panel</p>
+  <p *ngSwitchDefault>User Panel</p>
+</div>
+
+<p [ngClass]="{active: isActive}">Class Example</p>
+
+<p [ngStyle]="{'color': color}">Style Example</p>
+
+<p appHighlight>Custom Highlight</p>
+
+<h3> Login Status : {{ isLoggedIn?'Yes':'No' }}</h3>
+

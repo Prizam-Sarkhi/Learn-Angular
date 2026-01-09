@@ -1,0 +1,30 @@
+<p>pipes-demo works!</p>
+<p>{{ text | uppercase }}</p>
+<p>{{ text | lowercase }}</p>
+<p>{{ text | titlecase }}</p>
+
+<p>Original number : {{ number }}</p>
+<p>Original number2 : {{ number2 }}</p>
+<p>new number : {{ number | number:'1.0-0' }}</p>
+<p>new number2 : {{ number2 | number:'1.2-2' }}</p>
+<p>Profit : {{ profit | percent }}</p>
+<p>Amount : {{ number2 | currency:'INR' }}</p>
+<p>Amount : {{ number2 | currency:'INR':'symbol' }}</p>
+
+<p>Sliced Text : {{ text | slice:2:8 }}</p>
+
+<!-- Pipe Chaining -->
+<p>Chained Pipes : {{ text | uppercase | slice:0:7 }}</p>
+
+<h3>Dates</h3>
+<p>date : {{ today | date}}</p>
+<p>short : {{ today | date:'short'}}</p>
+<p>shortDate : {{ today | date:'shortDate'}}</p>
+<p>shortTime : {{ today | date:'shortTime'}}</p>
+
+<p>medium : {{ today | date:'medium'}}</p>
+<p>mediumDate : {{ today | date:'mediumDate'}}</p>
+<p>mediumTime : {{ today | date:'mediumTime'}}</p>
+
+<p>long : {{ today | date:'long' }}</p>
+<p>fullDate : {{ today | date:'fullDate' }}</p>
