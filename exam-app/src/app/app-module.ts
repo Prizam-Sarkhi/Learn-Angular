@@ -1,12 +1,13 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Demo } from './demo/demo';
 import { Highlight } from './highlight';
 import { DataBindingDemo } from './data-binding-demo/data-binding-demo';
 import { PipesDemo } from './pipes-demo/pipes-demo';
+import { FormsDemo } from './forms-demo/forms-demo';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,13 @@ import { PipesDemo } from './pipes-demo/pipes-demo';
     Demo,
     Highlight,
     DataBindingDemo,
-    PipesDemo
+    PipesDemo,
+    FormsDemo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

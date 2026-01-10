@@ -1,0 +1,8 @@
+<p>forms-demo works!</p>
+<form (ngSubmit)="calculateSum()">
+    <input type="number" name="num1" [(ngModel)]="num1" placeholder="Enter first number">
+    <input type="number" name="num2" [(ngModel)]="num2" placeholder="Enter second number">
+    <button type="submit">Add</button>
+</form>
+
+<p *ngIf="sum!==null">Sum : {{ sum }}</p>
