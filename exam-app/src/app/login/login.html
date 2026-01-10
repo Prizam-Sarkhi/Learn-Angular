@@ -1,0 +1,28 @@
+<p>login works!</p>
+<form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+
+  <label>Email:</label>
+  <input type="email" formControlName="email">
+
+  <div *ngIf="loginform.get('email')?.invalid && loginform.get('email')?.touched">
+    Email is required and must be valid
+  </div>
+
+  <br>
+
+  <label>Password:</label>
+  <input type="password" formControlName="password">
+
+  <div *ngIf="loginform.get('password')?.errors?.['required'] && loginform.get('password')?.touched">
+    Password is required
+  </div>
+
+  <div *ngIf="loginform.get('password')?.errors?.['pattern'] && loginform.get('password')?.touched">
+    Password must contain at least one uppercase letter and one number (min 6 chars)
+  </div>
+
+  <br>
+
+  <button type="submit" [disabled]="loginform.invalid">Login</button>
+
+</form>
